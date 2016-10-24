@@ -1,0 +1,52 @@
+\documentclass[letter,12pt]{article}
+
+\include{meta}
+
+% \pdffile{arg1}{arg2}{arg3}{arg4}
+% arg1 (boolean): true se o pdf possui mais de uma página, false caso contrário
+% arg2 (float): escala do documento
+% arg3 (string): comandos LaTeX a serem inseridos antes do pdf
+% arg4 (string): path do pdf
+
+\begin{document}
+
+\include{capa}
+
+\tableofcontents
+
+% 1 - Diploma
+\pdffile{false}{0.75}{\section{Diploma ou Declaração de provável concludente}\label{diploma}}{documentos/1-diploma.pdf}
+
+% 2 - Histórico
+\pdffile{false}{0.75}{\section{Histórico escolar de graduação}\label{historico}}{documentos/2-historico.pdf}
+
+% 3 - Currículo Lattes
+\pdffile{false}{0.9}{\section{Curriculum lattes}\label{lattes}}{documentos/3-lattes.pdf}
+
+% 3.1 - Dados pessoais
+\pdffile{false}{0.8}{\subsection{Dados Pessoais}\subsubsection{Documentos}}{documentos/null.pdf}
+\pdffile{false}{0.8}{\subsubsection{Endereço Residencial -- Comprovante de Residência}}{documentos/null.pdf}
+
+% 3.2 - Formação Acadêmica
+\pdffile{false}{0.8}{\subsection{Formação Acadêmica}\subsubsection{Graduação}Vide histórico acadêmico na Seção~\ref{historico}.\subsubsection{Ensino Médio}}{documentos/null.pdf}
+\pdffile{false}{0.8}{\subsubsection{Ensino Fundamental}}{documentos/null.pdf}
+
+% 3.3 - Formação Complementar
+\pdffile{false}{0.8}{\subsection{Formação Complementar}}{documentos/null.pdf}
+
+% 3.4 - Atuação Profissional
+\pdffile{false}{0.75}{\subsection{Atuação Profissional}}{documentos/null.pdf}
+
+% 3.5 - Produção
+\pdffile{false}{0.75}{\subsection{Produção}\subsubsection{Trabalhos publicados em anais de eventos (completo)}}{documentos/null.pdf}
+\pdffile{false}{0.75}{\subsubsection{Trabalhos publicados em anais de eventos (resumo)}}{documentos/null.pdf}
+
+% 3.6 - Eventos
+\pdffile{false}{0.75}{\subsection{Eventos}}{documentos/null.pdf}
+
+% 4 - POSCOMP
+\pdffile{false}{0.8}{\section{POSCOMP}}{documentos/4-poscomp.pdf}
+
+% 5 - Anexo
+\pdffile{true}{0.8}{\section{Anexo}}{documentos/5-anexo.pdf}
+\end{document}
